@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import links from "../constants/links"
-import socialIcons from "../constants/social-icons"
+// import socialIcons from "../constants/social-icons"
 // import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../css/footer.module.css"
 
