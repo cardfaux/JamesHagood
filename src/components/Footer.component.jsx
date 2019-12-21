@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import links from "../constants/links"
-// import socialIcons from "../constants/social-icons"
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
+import socialIcons from "../constants/social-icons"
 import styles from "../css/footer.module.css"
 
 const Footer = () => {
@@ -12,13 +11,13 @@ const Footer = () => {
       <div className={styles.links}>
         {links.map((item, index) => {
           return (
-            <Link fade key={index} to={item.path}>
+            <AniLink fade key={index} to={item.path}>
               {item.text}
-            </Link>
+            </AniLink>
           )
         })}
       </div>
-      {/* <div className={styles.icons}>
+      <div className={styles.icons}>
         {socialIcons.map((item, index) => {
           return (
             <a
@@ -31,7 +30,7 @@ const Footer = () => {
             </a>
           )
         })}
-      </div> */}
+      </div>
       <div className={styles.copyright}>
         copyright &copy; james hagood development {new Date().getFullYear()} all
         rights reserved

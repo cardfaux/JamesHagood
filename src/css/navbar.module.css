@@ -1,4 +1,5 @@
 .nav-header {
+  background: linear-gradient(rgba(30, 30, 30, 1), rgba(80, 80, 80, 1));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +30,7 @@
 
 .show-nav {
   height: 216px;
+  background: linear-gradient(rgba(30, 30, 30, 1), rgba(80, 80, 80, 1));
 }
 
 .nav-links a {

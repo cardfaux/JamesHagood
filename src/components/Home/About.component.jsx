@@ -1,4 +1,5 @@
 import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import StyledTitle from "../StyledTitle"
 import img from "../../images/js.jpg"
@@ -24,9 +25,9 @@ const About = () => {
             Like A Mobile Application with Much Faster, Almost Instant Page
             Renders. Providing A Much Better User Experience.....
           </p>
-          <button type="button" className="btn-primary">
+          <AniLink fade to="/about" className="btn-primary">
             read more
-          </button>
+          </AniLink>
         </article>
       </div>
     </section>
