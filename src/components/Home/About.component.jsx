@@ -1,18 +1,35 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import StyledTitle from "../StyledTitle"
-import img from "../../images/js.jpg"
+// import img from "../../images/js.jpg"
 import styles from "../../css/about.module.css"
 
+const getAbout = graphql`
+  query aboutImage {
+    aboutImage: file(relativePath: { eq: "js.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
+
 const About = () => {
+  const { aboutImage } = useStaticQuery(getAbout)
+
   return (
     <section className={styles.about}>
       <StyledTitle title="about" subtitle="me" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
-            <img src={img} alt="javascript" />
+            {/* <img src={img} alt="javascript" /> */}
+            <Img fluid={aboutImage.childImageSharp.fluid} alt="javascript" />
           </div>
         </article>
         <article className={styles.aboutInfo}>
