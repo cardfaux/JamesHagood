@@ -16,7 +16,7 @@ export default [
   },
   {
     icon: <FaDigitalOcean />,
-    title: "Cloud Severless Deployment",
+    title: "Cloud Deployment",
     text:
       "I Use Companies Such as Digital Ocean and Nelify To Deploy My Applications to the Cloud for Reduced Hosting Costs and Better Performance",
   },

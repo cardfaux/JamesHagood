@@ -7,6 +7,6 @@ export default [
   },
   {
     icon: <FaLinkedinIn />,
-    url: "https://twitter.com/?lang=en",
+    url: "https://www.linkedin.com/in/james-hagood-5776b4199/",
   },
 ]
