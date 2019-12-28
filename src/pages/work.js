@@ -1,12 +1,12 @@
 import React from "react"
 
-import ImageGallery from "../components/Work/ImageGallery.component"
+import WorkList from "../components/Work/WorkList.component"
 import Layout from "../components/Layout.component"
 
 export default () => {
   return (
     <Layout>
-      <ImageGallery />
+      <WorkList />
     </Layout>
   )
 }
