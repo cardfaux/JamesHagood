@@ -51,11 +51,14 @@ module.exports = {
       options: {
         fonts: [
           {
+            family: `Lato`,
+          },
+          {
             family: `Poppins`,
             subsets: [`latin`],
           },
           {
-            family: `Open Sans`,
+            family: `Poppins`,
             variants: [`400`, `700`],
           },
         ],
