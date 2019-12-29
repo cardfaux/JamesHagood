@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Image from "gatsby-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Image from 'gatsby-image';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-import Layout from "../components/Layout.component"
-import StyledTitle from "../components/StyledTitle"
-import styles from "../css/single-work.module.css"
+import Layout from '../components/Layout.component';
+import StyledTitle from '../components/StyledTitle';
+import styles from '../css/single-work.module.css';
 
 const workTemplate = ({ data }) => {
   const {
@@ -14,8 +14,8 @@ const workTemplate = ({ data }) => {
     languages,
     description: { description },
     image,
-  } = data.work
-  console.log(description)
+  } = data.work;
+  console.log(description);
 
   return (
     <Layout>
@@ -33,8 +33,8 @@ const workTemplate = ({ data }) => {
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query getWork($slug: String!) {
@@ -52,6 +52,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default workTemplate
+export default workTemplate;

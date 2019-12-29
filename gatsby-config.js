@@ -4,17 +4,17 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "JamesHagood Design and Development",
+    title: 'JamesHagood Design and Development',
     description:
-      "Fullstack JavaScript Development To Fit All of Your Application Needs",
-    author: "James Hagood",
+      'Fullstack JavaScript Development To Fit All of Your Application Needs. Using The Latest Most Cutting Edge Technology That Web Development Has To Offer. Delivering Blazing Fast Web Sites to All of Your Customers Improving The Customer Experience',
+    author: 'James Hagood',
   },
   plugins: [
     {
@@ -46,9 +46,24 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`,
+            subsets: [`latin`],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
   ],
-}
+};

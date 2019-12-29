@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
-import Img from "gatsby-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-import StyledTitle from "../StyledTitle"
+import StyledTitle from '../StyledTitle';
 
 const getImages = graphql`
   query Images {
@@ -44,10 +44,10 @@ const getImages = graphql`
       }
     }
   }
-`
+`;
 
 const ImageGallery = () => {
-  const data = useStaticQuery(getImages)
+  const data = useStaticQuery(getImages);
 
   return (
     <>
@@ -102,8 +102,8 @@ const ImageGallery = () => {
         </section>
       </Wrapper>
     </>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   text-align: center;
@@ -174,6 +174,6 @@ const Wrapper = styled.div`
       height: 100%;
     }
   }
-`
+`;
 
-export default ImageGallery
+export default ImageGallery;
