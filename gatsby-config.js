@@ -15,6 +15,9 @@ module.exports = {
     description:
       'Fullstack JavaScript Development To Fit All of Your Application Needs. Using The Latest Most Cutting Edge Technology That Web Development Has To Offer. Delivering Blazing Fast Web Sites to All of Your Customers Improving The Customer Experience',
     author: 'James Hagood',
+    twitterUsername: '@JamesHagoodDD',
+    image: 'james.png',
+    siteUrl: 'https://jameshagood.tech',
   },
   plugins: [
     {
@@ -64,9 +67,19 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://jameshagood.tech',
+        sitemap: 'https://jameshagood.tech/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ],
 };

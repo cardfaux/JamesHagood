@@ -5,6 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import Layout from '../components/Layout.component';
 import StyledTitle from '../components/StyledTitle';
+import SEO from '../components/SEO.component';
 import styles from '../css/single-work.module.css';
 
 const workTemplate = ({ data }) => {
@@ -15,10 +16,10 @@ const workTemplate = ({ data }) => {
     description: { description },
     image,
   } = data.work;
-  console.log(description);
 
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <section className={styles.work}>
         <div className={styles.center}>
           <div className={styles.imgContainer}>

@@ -7,10 +7,12 @@ import StyledHero from "../components/StyledHero.component"
 import Banner from "../components/Banner.component"
 import About from "../components/Home/About.component"
 import Services from "../components/Home/Services.component"
+import SEO from '../components/SEO.component'
 
 export default ({ data }) => {
   return (
     <Layout>
+      <SEO title="Home" description="JamesHagood Design and Development, Building Modern WebSites with Your Ideas." />
       <StyledHero home="true" img={data.codeImg.childImageSharp.fluid}>
         <Banner
           title="FullStack JavaScript Developer"
