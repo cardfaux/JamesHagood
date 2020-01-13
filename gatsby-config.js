@@ -30,9 +30,9 @@ module.exports = {
         // Setting this parameter is also optional
         respectDNT: false,
         // Avoids sending pageview hits from custom paths
-        exclude: ['/preview/**', '/do-not-track/me/too/'],
+        //exclude: ['/preview/**', '/do-not-track/me/too/'],
         // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 1,
+        pageTransitionDelay: 2000,
         // Enables Google Optimize using your container Id
         //optimizeId: 'YOUR_GOOGLE_OPTIMIZE_TRACKING_ID',
         // Enables Google Optimize Experiment ID
