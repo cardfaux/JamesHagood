@@ -18,13 +18,13 @@ const Template = ({ data }) => {
       'embedded-asset-block': node => {
         return (
           <div className="rich">
-            <h3>this is awesome image</h3>
+            {/* <h3>this is awesome image</h3> */}
             <img
               alt="blog"
               width="400"
               src={node.data.target.fields.file['en-US'].url}
             />
-            <p>images provided by john doe</p>
+            {/* <p>images provided by john doe</p> */}
           </div>
         );
       },

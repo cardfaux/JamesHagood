@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+//import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import Layout from '../components/Layout.component';
 import StyledTitle from '../components/StyledTitle';
@@ -11,7 +11,8 @@ import styles from '../css/single-work.module.css';
 const workTemplate = ({ data }) => {
   const {
     title,
-    published,
+    livePreview,
+    githubsrc,
     languages,
     description: { description },
     image,
@@ -31,6 +32,22 @@ const workTemplate = ({ data }) => {
         <div className={styles.description}>
           <StyledTitle title="brief" subtitle="description" />
           <h2>{description}</h2>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+            href={`${livePreview}`}
+          >
+            live preview
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+            href={`${githubsrc}`}
+          >
+            source code
+          </a>
         </div>
       </section>
     </Layout>
@@ -43,6 +60,8 @@ export const query = graphql`
       title
       published(formatString: "MMMM Do YYYY")
       languages
+      githubsrc
+      livePreview
       description {
         description
       }
