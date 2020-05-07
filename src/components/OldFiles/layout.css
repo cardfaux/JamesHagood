@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Lato|Poppins"); */
+/* @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
 
 :root {
   --primaryColor: rgba(0, 203, 255, 1);
@@ -96,8 +96,8 @@ a {
   max-height: 600px;
   box-shadow: var(--lightShadow);
 } */
-main {
+/* main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
+} */

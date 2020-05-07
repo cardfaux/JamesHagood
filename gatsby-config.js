@@ -66,6 +66,9 @@ module.exports = {
             family: `Lato`,
           },
           {
+            family: `Sulphur Point`
+          },
+          {
             family: `Poppins`,
             subsets: [`latin`],
           },
